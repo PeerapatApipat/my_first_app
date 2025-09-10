@@ -1,0 +1,48 @@
+import 'package:flutter/material.dart';
+
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar:AppBar( title:Text('Login Page') ,),
+      body: Container(
+         width: MediaQuery.of(context).size.width,
+        child:Column(
+         children: [
+            Text("hello",style:TextStyle(
+              fontSize:30,
+              fontWeight: FontWeight.bold,
+              color: Colors.red
+            ) ,),
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: TextField(decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(width: 1)
+                )
+              ),),
+            ),
+            SingleChildScrollView(
+              child: Column(
+                children: [
+                  ElevatedButton(onPressed: () {}, child: const Text('ElevatedButton')),
+                  FilledButton(onPressed: () {}, child: const Text('FilledButton')),
+                  OutlinedButton(onPressed: () {}, child: const Text('OutlinedButton')),
+                  TextButton(onPressed: () {}, child: const Text('TextButton')),
+                  IconButton(onPressed: () {}, icon: const Icon(Icons.file_download)),
+                ],
+              ),
+            )
+            ,Image.asset('assets/images/cat2.png')
+          
+            
+            ],
+        ) ,
+
+         
+        ),
+      );
+  }
+}
